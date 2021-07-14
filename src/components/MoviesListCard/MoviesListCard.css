@@ -1,0 +1,24 @@
+.moviesListCard{
+    text-align: center;
+    width: 18%;
+    /*background-color: #c9c0bb;*/
+    background-color: #96ded1;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: solid #96ded1;
+}
+
+.moviesListCard-dark{
+    background-color: #20665C;
+    border: solid #20665C;
+
+}
+.moviesListCard> *{
+    margin: 5px;
+}
+
+.moviesListCardRating{
+    margin: 20px auto;
+    bottom: 0;
+}

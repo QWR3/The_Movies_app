@@ -1,0 +1,50 @@
+.movieInfo {
+    margin-top: 100px;
+    height:  92vh;
+}
+
+.movieInfo-light{
+    background-color: #f5f5f5;
+}
+.movieInfo-dark{
+    background-color: #1E2021;
+    color: whitesmoke;
+}
+
+.movieInfoPoster img {
+    width: 100% ;
+    border-radius: 5px;
+}
+
+.movieInfoPoster{
+    width: 100%;
+    min-width: 40vh;
+    max-width: 55vh;
+    margin:0 20px;
+}
+
+.movieInfoText {
+    margin-top: 10px;
+    position: relative;
+
+}
+
+.movieInfoText>*{
+    margin: 15px;
+}
+
+.movieInfoText>h1,h3{
+    margin: 10px;
+    text-align: center;
+}
+
+.movieInfoRating{
+    text-align: center;
+}
+.movieInfo-with-generes{
+    padding-right: 20%;
+}
+.movieInfoTextAndImage{
+    display: flex;
+    padding-top: 20px;
+}

@@ -1,0 +1,70 @@
+.moviesList {
+    margin-top: 100px;
+    background-color: #f5f5f5;
+    text-align: center;
+    transition-duration: 0.3s;
+}
+
+.moviesListFlex {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-light {
+    background-color: #f5f5f5;
+    border: 2px solid #00ced1;
+}
+
+.btn-light:hover {
+    background-color: #00ced1;
+}
+
+.btn-dark {
+    background-color: #1E2021;
+    border: 2px solid #00A5A7;
+    color: whitesmoke;
+}
+
+.btn-dark:hover {
+    background-color: #00A5A7;
+}
+
+.moviesListWhenGenres {
+    margin-top: 100px;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding-right: 15%;
+}
+
+.loading {
+    text-align: center;
+    padding-top: 30%;
+    padding-bottom: 40%;
+
+}
+
+.loading-dark {
+    padding-bottom: 40%;
+    background-color: #1E2021;
+    color: whitesmoke;
+    height: 100%;
+}
+
+.moviesList-dark {
+    background-color: #1E2021;
+    color: black;
+}
+.body-dark {
+    background-color: #1E2021;
+}
+.moviesListIsLoading-true{
+    display: none!important;
+}
+

@@ -1,0 +1,30 @@
+.genre {
+    width: 80%;
+    margin: 0 auto;
+    /*padding: 0;*/
+}
+
+.btnGenre {
+    width: 100%;
+    border-radius: 10px;
+    font-size: medium;
+    padding: 4px;
+}
+
+
+.btnGenre-light {
+    border: solid cornflowerblue;
+    background-color: darkturquoise;
+}
+
+.btnGenre-light:hover {
+    background-color: cornflowerblue;
+}
+
+.btnGenre-dark{
+    border: solid #103C8B;
+    background-color: darkslategray;
+}
+.btnGenre-dark:hover{
+    background-color: #103C8B;
+}
