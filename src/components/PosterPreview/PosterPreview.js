@@ -12,10 +12,10 @@ export default function PosterPreview({path}) {
         dispatch(setLoadingFalse())
     }, [dispatch, path])
 
-    const className=path?'':'posterPreviewWithoutImage'
+    const className = path ? '' : 'posterPreviewWithoutImage'
 
     return (
-        <div className={"posterPreview "+className}>
+        <div className={"posterPreview " + className}>
             {path && <img src={baseUrl + path} alt=""/>}
         </div>
     );

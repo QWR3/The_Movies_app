@@ -5,8 +5,6 @@ import isLoadingReducer from "./isLoading"
 import pageReducer from "./page"
 import doGenresVisibleReducer from "./doGenresVisible"
 import movieInfoReducer from "./movieInfo"
-import genreReducer from "./genre"
-import searchReducer from "./search"
 import themeReducer from "./theme"
 
 export default configureStore({
@@ -17,8 +15,7 @@ export default configureStore({
         page:pageReducer,
         doGenresVisible:doGenresVisibleReducer,
         movieInfo:movieInfoReducer,
-        genre:genreReducer,
-        search:searchReducer,
+        // genre:geyr,
         theme:themeReducer
     }
 })

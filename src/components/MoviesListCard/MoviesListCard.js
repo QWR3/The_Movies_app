@@ -20,7 +20,7 @@ export default function MoviesListCard({movie:{overview,poster_path,id,release_d
     return (
             <div className={`moviesListCard moviesListCard-${theme}`}>
                 <PosterPreview path={poster_path}/>
-                <Link to={`/${id}`}>
+                <Link to={`/movie-${id}`}>
                     <h3>{original_title}</h3>
                 </Link>
                 <p className={"listCardOverview"}>{overviewSlice()}</p>

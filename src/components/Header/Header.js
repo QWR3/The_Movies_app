@@ -4,8 +4,6 @@ import './Header.css'
 import {useDispatch, useSelector} from "react-redux";
 import {setGenresVisibleFalse, setGenresVisibleTrue} from "../../redux/doGenresVisible";
 import {useState} from "react";
-import {setSearch} from "../../redux/search";
-import {setLoadingTrue} from "../../redux/isLoading";
 import {setDarkTheme, setLightTheme} from "../../redux/theme";
 
 export default function Header() {
@@ -22,14 +20,12 @@ export default function Header() {
     const onSubmit = (e) => {
         e.preventDefault()
         setInput('')
-        dispatch(setSearch(input))
-        dispatch(setLoadingTrue())
     }
 
-    const setTheme=()=>{
-        if(theme==='light'){
+    const setTheme = () => {
+        if (theme === 'light') {
             dispatch(setDarkTheme())
-        }else {
+        } else {
             dispatch(setLightTheme())
         }
     }
@@ -41,10 +37,12 @@ export default function Header() {
             </Link>
             <form action="" className={"headerForm"} onSubmit={onSubmit}>
                 <input type="text" name={"input"} value={input} onChange={onChange}/>
-                <button><i className={'fas fa-search'}/></button>
+                <Link to={`/search-${input}`} >
+                    <button><i className={'fas fa-search'}  /></button>
+                </Link>
             </form>
 
-            <button className={`btn btn-${theme}`} onClick={()=>setTheme()}>
+            <button className={`btn btn-${theme}`} onClick={() => setTheme()}>
                 <i className={iconTheme}/>
             </button>
 

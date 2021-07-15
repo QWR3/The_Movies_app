@@ -9,34 +9,35 @@ import Page from "../Page/Page";
 import GenresList from "../GenresList/GenresList";
 import {setLoadingTrue} from "../../redux/isLoading";
 
-export default function MoviesList() {
+
+
+export default function MoviesList({params: {genre: paramsGenre = '', search: paramsSearch = ''}}) {
     const dispatch = useDispatch()
-    const [movies, page, doGenresVisible, genre, search, isLoading, theme] = useSelector(({
-                                                                                              movies,
-                                                                                              page,
-                                                                                              doGenresVisible,
-                                                                                              genre,
-                                                                                              search,
-                                                                                              isLoading,
-                                                                                              theme
-                                                                                          }) => [movies, page.value, doGenresVisible.value, genre.value, search.value, isLoading.value, theme.value])
+    const [movies, page, doGenresVisible, isLoading, theme] = useSelector(({
+                                                                               movies,
+                                                                               page,
+                                                                               doGenresVisible,
+                                                                               isLoading,
+                                                                               theme
+                                                                           }) => [movies, page.value, doGenresVisible.value, isLoading.value, theme.value])
 
     useEffect(() => {
         dispatch(setLoadingTrue())
         try {
-            if (search) {
-                getSearch(page, search).then(value => {
+            if (paramsSearch) {
+                getSearch(page, paramsSearch).then(value => {
                     dispatch(setMovies(value.data))
+
                 })
             } else {
-                getMovies(page, genre).then(value => {
+                getMovies(page, paramsGenre).then(value => {
                     dispatch(setMovies(value.data));
                 })
             }
         } catch (e) {
             console.log(e)
         }
-    }, [page, genre, search, dispatch])
+    }, [page, dispatch, paramsGenre, paramsSearch])
 
     const className = doGenresVisible ? "moviesListWhenGenres transition-duration" : "moviesList transition-duration"
 

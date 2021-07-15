@@ -2,7 +2,6 @@ import './Page.css'
 
 import {useDispatch, useSelector} from "react-redux";
 import {nextPage, previewPage} from "../../redux/page";
-import {setLoadingTrue} from "../../redux/isLoading";
 
 export default function Page() {
     const [page, theme] = useSelector(({page, theme}) => [page.value, theme.value])
@@ -14,7 +13,6 @@ export default function Page() {
         <div className={'page'}>
             <button disabled={page < 2} onClick={() => {
                 dispatch(previewPage())
-                dispatch(setLoadingTrue())
             }
             } className={className}>preview
             </button>
@@ -23,7 +21,6 @@ export default function Page() {
 
             <button onClick={() => {
                 dispatch(nextPage())
-                dispatch(setLoadingTrue())
             }
             } className={className}>next
             </button>
